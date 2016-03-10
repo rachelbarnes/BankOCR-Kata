@@ -1,0 +1,24 @@
+c:\users\administrator\documents\visual studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe.config
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\secondOCRFile.txt
+C:\Users\Administrator\Documents\Visual Studio 2015\Projects\ConsoleApplication3\ConsoleApplication3\bin\Debug\firstOCRFile.txt
+C:\development\rbarnes\NotesCSharp\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe.config
+C:\development\rbarnes\NotesCSharp\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+C:\development\rbarnes\NotesCSharp\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+C:\development\rbarnes\NotesCSharp\ConsoleApplication3\ConsoleApplication3\bin\Debug\secondOCRFile.txt
+C:\development\rbarnes\NotesCSharp\ConsoleApplication3\ConsoleApplication3\bin\Debug\firstOCRFile.txt
+C:\development\rbarnes\NotesCSharp\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+C:\development\rbarnes\NotesCSharp\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+C:\development\rbarnes\NotesCSharp\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojResolveAssemblyReference.cache
+C:\development\rbarnes\BankOCR Kata\ConsoleApplication3\ConsoleApplication3\bin\Debug\secondOCRFile.txt
+C:\development\rbarnes\BankOCR Kata\ConsoleApplication3\ConsoleApplication3\bin\Debug\firstOCRFile.txt
+C:\development\rbarnes\BankOCR Kata\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe.config
+C:\development\rbarnes\BankOCR Kata\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+C:\development\rbarnes\BankOCR Kata\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+C:\development\rbarnes\BankOCR Kata\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+C:\development\rbarnes\BankOCR Kata\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+C:\development\rbarnes\BankOCR Kata\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojResolveAssemblyReference.cache
