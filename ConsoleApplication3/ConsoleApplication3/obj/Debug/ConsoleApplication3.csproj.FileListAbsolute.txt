@@ -22,3 +22,11 @@ C:\development\rbarnes\BankOCR Kata\ConsoleApplication3\ConsoleApplication3\bin\
 C:\development\rbarnes\BankOCR Kata\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
 C:\development\rbarnes\BankOCR Kata\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
 C:\development\rbarnes\BankOCR Kata\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojResolveAssemblyReference.cache
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe.config
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.exe
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.pdb
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\ConsoleApplication3\bin\Debug\secondOCRFile.txt
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\ConsoleApplication3\bin\Debug\firstOCRFile.txt
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.exe
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\ConsoleApplication3\bin\Debug\ConsoleApplication3.pdb
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\ConsoleApplication3\obj\Debug\ConsoleApplication3.csprojResolveAssemblyReference.cache

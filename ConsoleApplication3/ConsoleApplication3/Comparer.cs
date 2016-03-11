@@ -21,7 +21,7 @@ namespace ConsoleApplication3
 
         public bool ComparingListSize(List<string> ListA, List<string> ListB)
         {
-            bankOCR.ReadFile();
+            //bankOCR.ReadFile();
             bankOCR.AssignCharactersToIndex();
             ListA = bankOCR.zerothCharacter;
             ListB = drawnNumberCharacters.Numbers[1];
@@ -36,7 +36,7 @@ namespace ConsoleApplication3
         }
         public bool ComparingListValues(List<string> ListA, List<string> ListB)
         {
-            bankOCR.ReadFile();
+            //bankOCR.ReadFile();
             bankOCR.AssignCharactersToIndex();
             //bankOCR.GetNthCharacter(MatricedDigitIndex); 
             ListA = bankOCR.zerothCharacter;
@@ -48,7 +48,7 @@ namespace ConsoleApplication3
         }
         public int ComparingLists(List<string> IndexedList, Dictionary<int, List<string>> DictionaryB)
         {
-            bankOCR.ReadFile();
+            //bankOCR.ReadFile();
             bankOCR.AssignCharactersToIndex();
             bankOCR.GetNthCharacter(comparerDigitIndex);
             for (comparerDigitIndex = 0; comparerDigitIndex < 9; comparerDigitIndex++)

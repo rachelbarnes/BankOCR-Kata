@@ -31,3 +31,14 @@ C:\development\rbarnes\BankOCR Kata\ConsoleApplication3\Tests\bin\Debug\nunit.fr
 C:\development\rbarnes\BankOCR Kata\ConsoleApplication3\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
 C:\development\rbarnes\BankOCR Kata\ConsoleApplication3\Tests\obj\Debug\Tests.dll
 C:\development\rbarnes\BankOCR Kata\ConsoleApplication3\Tests\obj\Debug\Tests.pdb
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\Tests\bin\Debug\secondOCRFile.txt
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\Tests\bin\Debug\firstOCRFile.txt
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\Tests\bin\Debug\Tests.dll
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\Tests\bin\Debug\Tests.pdb
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\Tests\bin\Debug\ConsoleApplication3.exe
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\Tests\bin\Debug\nunit.framework.dll
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\Tests\bin\Debug\ConsoleApplication3.pdb
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\Tests\bin\Debug\nunit.framework.xml
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\Tests\obj\Debug\Tests.dll
+C:\development\rbarnes\BankOCRKata\ConsoleApplication3\Tests\obj\Debug\Tests.pdb

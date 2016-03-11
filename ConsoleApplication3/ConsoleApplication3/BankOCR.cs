@@ -14,9 +14,9 @@ namespace ConsoleApplication3
         {
             var bankOCR = new BankOCR();
             var drawnNumberCharacters = new DrawnNumberCharacters();
-            var comparer = new Comparer();
+            //var comparer = new Comparer();
             var TextLines = bankOCR.TextLines;
-            bankOCR.ReadFile();
+            //bankOCR.ReadFile();
 
             //      var GettingIntsFromTextLines = comparer.ComparingLists(bankOCR.GetNthCharacter(), drawnNumberCharacters.Numbers);
             //     Console.Write(GettingIntsFromTextLines); 
@@ -29,14 +29,14 @@ namespace ConsoleApplication3
         public string test = "123456789";
         public string firstRow, secondRow, thirdRow, fourthRow;
         public int key;
-        public List<int> numberValuesInt;
+        //public List<int> numberValuesInt;
         public List<string> numbersValues;
         public int[] keyArray;
 
         public object ParseAllCharacters() //max's method
         {
             List<string>[] Character = new List<string>[] { zerothCharacter, firstCharacter, secondCharacter, thirdCharacter, fourthCharacter, fifthCharacter, sixthCharacter, seventhCharacter, eigthCharacter };
-            return Character.Select(ParseCharacter).Select((v,idx) => ((int)Math.Pow(10, 8 - idx)) * v).Aggregate((acc, elm) => acc + elm);
+            return Character.Select(ParseCharacter).Select((v, idx) => ((int)Math.Pow(10, 8 - idx)) * v).Aggregate((acc, elm) => acc + elm);
         }
         public object ParseAllCharacters_2()
         {
@@ -55,16 +55,16 @@ namespace ConsoleApplication3
             int number8 = ParseCharacter(eigthCharacter);
             int[] numberN = new int[] { number0, number1, number2, number3, number4, number5, number6, number7, number8 };
             List<string>[] Character = new List<string>[] { zerothCharacter, firstCharacter, secondCharacter, thirdCharacter, fourthCharacter, fifthCharacter, sixthCharacter, seventhCharacter, eigthCharacter };
-            string aggregatedNumber = ""; 
+            string aggregatedNumber = "";
             //foreach (List<string> character in Character)
             //{
             //    ParseCharacter(character);
-                foreach (int number in numberN)
-                {
-                    aggregatedNumber+= number.ToString();
-                }
+            foreach (int number in numberN)
+            {
+                aggregatedNumber += number.ToString();
+            }
             //}
-            
+
             return Int64.Parse(aggregatedNumber);
 
         }
@@ -87,14 +87,10 @@ namespace ConsoleApplication3
         public List<string> zerothCharacter, firstCharacter, secondCharacter, thirdCharacter, fourthCharacter, fifthCharacter, sixthCharacter, seventhCharacter, eigthCharacter;
 
 
-        public int ReadFile(string v)
-        {
-            return 0;
-        }
-        public List<string> ReadFile()
+        public List<string> ReadFile(string fileName)
         {
             string line;
-            var file = new System.IO.StreamReader("secondOCRFile.txt");
+            var file = new System.IO.StreamReader(fileName);
             while ((line = file.ReadLine()) != null)
             {
                 Console.WriteLine(line);
@@ -137,52 +133,5 @@ namespace ConsoleApplication3
 
 
 
-        //need to create a method that just does one drawnNumberSection and then you can call the method in the loop for each indexes section
-        //and then we can call the method in a greater loop. No loop is needed in the GetNthCharacter(). 
-        // populated TextLines
-
-        //will the return type be a List<int> or just int - if we do a list, then we can do just
-        //console.write(comparing...) and that should print it out in a horizontal line rather than a veritcal list
     }
 }
-
-
-
-//if this was going to work for strings rather than List<stirng>:
-/* string result = "";
- for(int i =0; i<=3; i++) {
-   result += TextLines[i].Substring(CharacterMatrixIndex * 3, lengthOfSubstring);
- }
- */
-
-
-//var DictofNumbers = (drawnNumbersCharacter.Numbers[key]).ToArray(); 
-
-//for(Index = 0; Index < 9; Index++)
-//     {
-//         if(GetNthCharacter(Index))
-//     }
-
-//List<int> numberValuesListInt = numberValues.ToList();
-//List<string> numberValuesString = numberValuesListInt.ConvertAll(new Converter<int, string>();
-
-
-
-//    if (ParseNumberValuesBool)
-//    {
-//        return key;
-
-//    }
-//    else return -1;
-
-
-//List<int> numberValuesInt = new List<int> { number0, number1, number2, number3, number4, number5, number6, number7, number8 };
-//List<string> numbersValues = numberValuesInt.ConvertAll<string>(delegate (int NumbersValuesInt) { return NumbersValuesInt.ToString(); });
-////bool ParseNumberValuesBool = true;
-//var ParseNumberValues = ParseCharacter(numbersValues);
-////keyArray = key.ToArray(); 
-////foreach (List<string> number in numbersValues)
-////    {
-////        ParseCharacter(number);
-////    }
-//return false;
