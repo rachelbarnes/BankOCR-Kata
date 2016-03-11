@@ -11,6 +11,18 @@ namespace Tests
     [TestFixture]
     public class TestsForBankOCRKata
     {
+
+        [Test]
+        public void CanParseAllCharactersAtOnceJustOnes()
+        {
+            var drawnNumberCharacters = new DrawnNumberCharacters();
+
+            var bankocr = new BankOCR();
+            bankocr.ReadFile("firstOCRFile.txt");
+            bankocr.AssignCharactersToIndex();
+            var result = bankocr.ParseAllCharacters();
+            Assert.AreEqual(111111111, result);
+        }
         [Test]
         public void CanParseAllCharactersAtOnce()
         {
@@ -21,63 +33,6 @@ namespace Tests
             bankocr.AssignCharactersToIndex();
             var result = bankocr.ParseAllCharacters();
             Assert.AreEqual(123456789, result);
-        }
-
-        [Test]
-        public void CanParseAllCharacters()
-        {
-            var drawnNumberCharacters = new DrawnNumberCharacters();
-
-            var bankocr = new BankOCR();
-            bankocr.ReadFile("firstOCRFile.txt");
-            bankocr.AssignCharactersToIndex();
-            int number0 = bankocr.ParseCharacter(bankocr.zerothCharacter);
-            int number1 = bankocr.ParseCharacter(bankocr.firstCharacter);
-            int number2 = bankocr.ParseCharacter(bankocr.secondCharacter);
-            int number3 = bankocr.ParseCharacter(bankocr.thirdCharacter);
-            int number4 = bankocr.ParseCharacter(bankocr.fourthCharacter);
-            int number5 = bankocr.ParseCharacter(bankocr.fifthCharacter);
-            int number6 = bankocr.ParseCharacter(bankocr.sixthCharacter);
-            int number7 = bankocr.ParseCharacter(bankocr.seventhCharacter);
-            int number8 = bankocr.ParseCharacter(bankocr.eigthCharacter);
-
-            Assert.AreEqual(1, number0);
-            Assert.AreEqual(1, number1);
-            Assert.AreEqual(1, number2);
-            Assert.AreEqual(1, number3);
-            Assert.AreEqual(1, number4);
-            Assert.AreEqual(1, number5);
-            Assert.AreEqual(1, number6);
-            Assert.AreEqual(1, number7);
-            Assert.AreEqual(1, number8);
-        }
-
-        //[Test]
-        //public void NumbersValuesStringsValues()
-        //{
-        //    var drawnNumberCharacters = new DrawnNumberCharacters();
-        //    var bankOCR = new BankOCR();
-        //    List<string> numberValues = bankOCR.numbersValues;
-        //    bankOCR.ReadFile("secondOCRFile.txt");
-        //    bankOCR.AssignCharactersToIndex(); 
-        //    bankOCR.ParseCharacter(numberValues); 
-        //    bankOCR.ParseAllCharacters();
-        //    List<int> numbersValuesInt = bankOCR.numberValuesInt; 
-
-        //    Assert.AreEqual(123, numbersValuesInt);
-        //}
-
-        [Test]
-        public void CanParseOneCharacter()
-        {
-            var drawnNumberCharacters = new DrawnNumberCharacters();
-
-            var bankocr = new BankOCR();
-            bankocr.ReadFile("firstOCRFile.txt");
-            bankocr.AssignCharactersToIndex();
-            int number = bankocr.ParseCharacter(bankocr.zerothCharacter);
-
-            Assert.AreEqual(1, number);
         }
 
         [Test]
@@ -97,56 +52,6 @@ namespace Tests
             };
 
             Assert.AreEqual(expected, zerothCharacter);
-        }
-
-        [Test]
-        public void TestingTheSetCharacters()
-        {
-            var bankOCR = new BankOCR();
-            var drawnNumberCharacters = new DrawnNumberCharacters();
-            bankOCR.ReadFile("firstOCRFile.txt");
-            bankOCR.AssignCharactersToIndex();
-
-
-            Assert.AreEqual(drawnNumberCharacters.Numbers[1], bankOCR.zerothCharacter);
-        }
-
-        [Test]
-        [Ignore]
-        public void TestingComparingListSize()
-        {
-            var comparer = new Comparer();
-            var ListA = comparer.ListA;
-            var ListB = comparer.ListB;
-            var ListACount = ListA.Count();
-            var ListBCount = ListB.Count();
-            comparer.ComparingListSize(ListA, ListB);
-
-            Assert.AreEqual(ListACount, ListBCount);
-        }
-
-
-        [Test]
-        [Ignore]
-        public void TestingComparingListValues()
-        {
-            var comparer = new Comparer();
-            var ListA = comparer.ListA;
-            var ListB = comparer.ListB;
-            comparer.ComparingListValues(ListA, ListB);
-
-            Assert.AreEqual(ListA, ListB);
-        }
-
-        [Test]
-        public void TestingFirstCharacterWithDictionaryValue()
-        {
-            var bankocr = new BankOCR();
-            var drawnNumberCharacters = new DrawnNumberCharacters();
-            bankocr.ReadFile("firstOCRFile.txt");
-            bankocr.AssignCharactersToIndex();
-
-            Assert.AreEqual(drawnNumberCharacters.Numbers[1], bankocr.secondCharacter);
         }
 
         [Test]

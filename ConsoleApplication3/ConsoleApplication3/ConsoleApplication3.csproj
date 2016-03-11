@@ -47,7 +47,6 @@
   <ItemGroup>
     <Compile Include="DrawnNumberCharacters.cs" />
     <Compile Include="BankOCR.cs" />
-    <Compile Include="Comparer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
