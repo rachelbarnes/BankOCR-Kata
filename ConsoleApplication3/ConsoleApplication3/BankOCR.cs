@@ -45,11 +45,15 @@ namespace ConsoleApplication3
             return singleDrawnCharacter;
         }
 
-        public int ConvertCharactersToIntegers(List<string> textToBeConverted)
+        public int GetAccountNumber(List<string> textToBeConverted)
         {
             var dictionary = new DictionaryOfCharacters();
             int lengthOfLine = textToBeConverted[1].Count() / 3;
             string retrieveDictionaryValue = "";
+            //in order to access a variable that is assigned and defined in a smaller scope, you have to define the variable to something
+            //first (such as an empty string or 0), then you can call the said variable and the changes made to it in its scope. 
+            //defining it outside the scope allows you to access and call the modified version of it from the scope outside the scope. 
+
             for (int characterIndex = 0; characterIndex < lengthOfLine; characterIndex++)
             {
                 string drawnCharacterString = GetSingleIntCharacter(characterIndex, textToBeConverted); 

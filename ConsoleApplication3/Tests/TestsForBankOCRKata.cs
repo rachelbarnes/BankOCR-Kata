@@ -60,10 +60,10 @@ namespace Tests
             var dictionary = new DictionaryOfCharacters();
             var textFile = bankocr.ParseFile("firstOCRFile.txt");
             var substringCharacter = bankocr.GetSingleIntCharacter(0, textFile);
-            var convertCharacters = bankocr.ConvertCharactersToIntegers(textFile);
+            var convertCharacters = bankocr.GetAccountNumber(textFile);
             var expected = 111111111;
-            Assert.AreEqual(expected, convertCharacters); 
- 
+            Assert.AreEqual(expected, convertCharacters);
+
 
         }
     }
