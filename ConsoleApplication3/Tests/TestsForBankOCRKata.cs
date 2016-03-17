@@ -19,15 +19,15 @@ namespace Tests
             var result = bankocr.ParseFile("firstOCRFile.txt");
             Assert.AreEqual(111111111, result);
         }
-        [Test]
-        public void TestingGetSingleCharacters()
-        {
-            var bankocr = new BankOCR();
-            var textFile = bankocr.ParseFile("firstOCRFile.txt");
-            var expected = "     |  |   ";
-            var actual = bankocr.GetSingleIntCharacter(0, textFile);
-            Assert.AreEqual(expected, actual);
-        }
+        //[Test]
+        //public void TestingGetSingleCharacters()
+        //{
+        //    var bankocr = new BankOCR();
+        //    var textFile = bankocr.ParseFile("firstOCRFile.txt");
+        //    var expected = "     |  |   ";
+        //    var actual = bankocr.GetSingleIntCharacter(0, textFile);
+        //    Assert.AreEqual(expected, actual);
+        //}
 
         //[Test]
         //public void TestGetSingleCharacter()
@@ -36,12 +36,12 @@ namespace Tests
         //    var dictionary = new DictionaryOfCharacters();
         //    var textFile = bankocr.ParseFile("firstOCRFile.txt");
         //    var substringCharacter = bankocr.GetSingleIntCharacter(0, textFile);
-        //    dictionary.defineDictionary(dictionary.textFileCharacters); 
-        //    var expected = dictionary.textFileCharacters[1]; 
-        //    Assert.AreEqual(expected, substringCharacter); 
+        //    var expected = dictionary.textFileCharacters[substringCharacter];
+        //    Assert.AreEqual(expected, 1);
         //}
 
         //[Test]
+        //[Ignore]
         //public void TestConverter()
         //{
         //    var bankocr = new BankOCR();
@@ -53,18 +53,19 @@ namespace Tests
         //    var expected = dictionary.textFileCharacters[1];
         //    Assert.AreEqual(expected, substringCharacter);
         //}
-        [Test]
-        public void TestConvertOneCharacterAtATime()
-        {
-            var bankocr = new BankOCR();
-            var dictionary = new DictionaryOfCharacters();
-            var textFile = bankocr.ParseFile("firstOCRFile.txt");
-            var substringCharacter = bankocr.GetSingleIntCharacter(0, textFile);
-            var convertCharacters = bankocr.GetAccountNumber(textFile);
-            var expected = 111111111;
-            Assert.AreEqual(expected, convertCharacters);
+        //[Test]
+        //[Ignore]
+        //public void TestConvertOneCharacterAtATime()
+        //{
+        //    var bankocr = new BankOCR();
+        //    var dictionary = new DictionaryOfCharacters();
+        //    var textFile = bankocr.ParseFile("firstOCRFile.txt");
+        //    var substringCharacter = bankocr.GetSingleIntCharacter(0, textFile);
+        //    var convertCharacters = bankocr.GetAccountNumber(textFile);
+        //    var expected = 111111111;
+        //    Assert.AreEqual(expected, convertCharacters);
 
 
-        }
+        //}
     }
 }
