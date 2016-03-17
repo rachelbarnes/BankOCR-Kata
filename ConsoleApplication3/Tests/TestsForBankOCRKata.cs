@@ -29,29 +29,42 @@ namespace Tests
             Assert.AreEqual(expected, actual);
         }
 
-        [Test]
-        public void TestGetSingleCharacter()
-        {
-            var bankocr = new BankOCR();
-            var dictionary = new DictionaryOfCharacters();
-            var textFile = bankocr.ParseFile("firstOCRFile.txt");
-            var substringCharacter = bankocr.GetSingleIntCharacter(0, textFile);
-            dictionary.defineDictionary(dictionary.textFileCharacters); 
-            var expected = dictionary.textFileCharacters[1]; 
-            Assert.AreEqual(expected, substringCharacter); 
-        }
+        //[Test]
+        //public void TestGetSingleCharacter()
+        //{
+        //    var bankocr = new BankOCR();
+        //    var dictionary = new DictionaryOfCharacters();
+        //    var textFile = bankocr.ParseFile("firstOCRFile.txt");
+        //    var substringCharacter = bankocr.GetSingleIntCharacter(0, textFile);
+        //    dictionary.defineDictionary(dictionary.textFileCharacters); 
+        //    var expected = dictionary.textFileCharacters[1]; 
+        //    Assert.AreEqual(expected, substringCharacter); 
+        //}
 
+        //[Test]
+        //public void TestConverter()
+        //{
+        //    var bankocr = new BankOCR();
+        //    var dictionary = new DictionaryOfCharacters();
+        //    var textFile = bankocr.ParseFile("firstOCRFile.txt");
+        //    var substringCharacter = bankocr.GetSingleIntCharacter(0, textFile);
+        //    var convertFirstCharacter = bankocr.ConvertCharactersToIntegers(textFile);
+        //    dictionary.defineDictionary(dictionary.textFileCharacters);
+        //    var expected = dictionary.textFileCharacters[1];
+        //    Assert.AreEqual(expected, substringCharacter);
+        //}
         [Test]
-        public void TestConverter()
+        public void TestConvertOneCharacterAtATime()
         {
             var bankocr = new BankOCR();
             var dictionary = new DictionaryOfCharacters();
             var textFile = bankocr.ParseFile("firstOCRFile.txt");
             var substringCharacter = bankocr.GetSingleIntCharacter(0, textFile);
-            var convertFirstCharacter = bankocr.ConvertOneCharacter(textFile);
-            dictionary.defineDictionary(dictionary.textFileCharacters);
-            var expected = dictionary.textFileCharacters[1];
-            Assert.AreEqual(expected, substringCharacter);
+            var convertCharacters = bankocr.ConvertCharactersToIntegers(textFile);
+            var expected = 111111111;
+            Assert.AreEqual(expected, convertCharacters); 
+ 
+
         }
     }
 }

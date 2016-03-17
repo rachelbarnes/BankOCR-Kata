@@ -32,9 +32,7 @@ namespace ConsoleApplication3
             }
             return textFile;
         }
-        //read hte file, seperate the characters, assign the characters
-        //to those values, compare the characters to the dictionary values
-        //return the dictionary key if equal
+
         public string GetSingleIntCharacter(int index, List<string> textLines)
         {
             string substringLine;
@@ -47,22 +45,18 @@ namespace ConsoleApplication3
             return singleDrawnCharacter;
         }
 
-        public int ConvertOneCharacter(List<string> textToBeConverted)
+        public int ConvertCharactersToIntegers(List<string> textToBeConverted)
         {
             var dictionary = new DictionaryOfCharacters();
             int lengthOfLine = textToBeConverted[1].Count() / 3;
-            //this should work since it's already off by one by being a zero based index list
-            //for (int dictionaryKey = 0; dictionaryKey < lengthOfLine; dictionaryKey++)
-            //{
-            int dictionaryKey = 1; 
-            string drawnCharacterString = GetSingleIntCharacter(dictionaryKey, textToBeConverted);
-                if (dictionary.textFileCharacters.ContainsValue(drawnCharacterString))
-                {
-                    return dictionaryKey;
-                }
-            //}
-            return -1;
+            string retrieveDictionaryValue = "";
+            for (int characterIndex = 0; characterIndex < lengthOfLine; characterIndex++)
+            {
+                string drawnCharacterString = GetSingleIntCharacter(characterIndex, textToBeConverted); 
+                retrieveDictionaryValue += dictionary.textFileCharacters[drawnCharacterString].ToString();
+            }
+            return int.Parse(retrieveDictionaryValue);
         }
     }
 }
- 
+
