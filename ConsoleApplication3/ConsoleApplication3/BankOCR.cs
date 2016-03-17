@@ -12,10 +12,12 @@ namespace ConsoleApplication3
         public static void Main(string[] args)
         {
             //var bankocr = new BankOCR();
-            //var displayFile = bankocr.ParseFile("firstOCRFile.txt");
-            //var displaySingleCharacter = bankocr.GetSingleIntCharacter(0, displayFile);
-            //Console.WriteLine(displayFile);
+            //var displayFile = bankocr.ParseFile("secondOCRFile.txt");
+            //var displaySingleCharacter = bankocr.GetSingleIntCharacter(5, displayFile);
+            //var getAccountNumber = bankocr.GetAccountNumber(displayFile);
+            ////Console.WriteLine(displayFile);
             //Console.WriteLine(displaySingleCharacter);
+            //Console.WriteLine(bankocr.GetAccountNumber(displayFile));
             //Console.ReadLine();
         }
     }
@@ -24,13 +26,13 @@ namespace ConsoleApplication3
         public int ParseFile(string textFileName)
         {
             List<string> textFile = new List<string>();
-            var file = "firstOCRFile.txt";
+            var file = "thirdOCRFile.txt";
             string[] readFile = System.IO.File.ReadAllLines(file); 
             foreach (string line in readFile)
             {
                 textFile.Add(line);
             }
-            // return textFile;
+            //return textFile;
             return GetAccountNumber(textFile);  
         }
 
@@ -39,6 +41,7 @@ namespace ConsoleApplication3
         {
             string substringLine;
             string singleDrawnCharacter = "";
+            //index = 5; 
             foreach (string line in textLines)
             {
                 substringLine = line.Substring((index * 3), 3);

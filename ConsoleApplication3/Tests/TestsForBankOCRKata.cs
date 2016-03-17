@@ -13,12 +13,41 @@ namespace Tests
     {
 
         [Test]
-        public void CanParseAllCharactersAtOnceJustOnes()
+        public void ParseAllCharacterFirstAccountNumber()
         {
             var bankocr = new BankOCR();
             var result = bankocr.ParseFile("firstOCRFile.txt");
             Assert.AreEqual(111111111, result);
         }
+
+        [Test]
+        public void ParseAllCharactersSecondAccountNumber()
+        {
+            var bankocr = new BankOCR(); 
+            var result = bankocr.ParseFile("secondOCRFile.txt");
+            Assert.AreEqual(123456789, result); 
+        }
+
+        [Test]
+        public void ParseAllCharactersThirdAccountNumber()
+        {
+            var bankocr = new BankOCR();
+            var result = bankocr.ParseFile("thirdOCRFile.txt");
+            Assert.AreEqual(490067715, result); 
+        }
+
+        //[Test]
+        //public void TestingAllPartsOfClassBankOCR()
+        //{
+        //    var bank = new BankOCR();
+        //    var dictionary = new DictionaryOfCharacters();
+        //    var expected = 123456789;
+        //    var textFile = bank.ParseFile("secondOCRFile.txt");
+        //    var getdictionaryKey = bank.GetSingleIntCharacter(0, textFile);
+        //    var actual = bank.GetAccountNumber(textFile); 
+        //    Assert.AreEqual(expected, actual);
+        //}
+
         //[Test]
         //public void TestingGetSingleCharacters()
         //{
