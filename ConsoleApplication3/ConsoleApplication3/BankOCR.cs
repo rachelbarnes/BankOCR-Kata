@@ -23,10 +23,10 @@ namespace ConsoleApplication3
     }
     public class BankOCR
     {
-        public int ParseFile(string textFileName)
+        public long ParseFile(string textFileName)
         {
             List<string> textFile = new List<string>();
-            var file = "firstOCRFile.txt";
+            var file = "fourthOCRFile.txt";
             string[] readFile = System.IO.File.ReadAllLines(file); 
             foreach (string line in readFile)
             {
@@ -50,7 +50,7 @@ namespace ConsoleApplication3
             return singleDrawnCharacter;
         }
 
-        public int GetAccountNumber(List<string> textToBeConverted)
+        public long GetAccountNumber(List<string> textToBeConverted)
         {
             var dictionary = new DictionaryOfCharacters();
             int lengthOfLine = textToBeConverted[1].Count() / 3;
@@ -61,7 +61,7 @@ namespace ConsoleApplication3
                 string drawnCharacterString = GetSingleIntCharacter(characterIndex, textToBeConverted); 
                 retrieveDictionaryValue += dictionary.textFileCharacters[drawnCharacterString].ToString();
             }
-            return int.Parse(retrieveDictionaryValue);
+            return Int64.Parse(retrieveDictionaryValue);
         }
     }
 }

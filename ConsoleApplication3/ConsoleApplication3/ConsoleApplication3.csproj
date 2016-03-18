@@ -54,6 +54,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="fourthOCRFile.txt" />
     <Content Include="secondOCRFile.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

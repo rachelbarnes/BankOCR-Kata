@@ -36,6 +36,14 @@ namespace Tests
             Assert.AreEqual(490067715, result); 
         }
 
+        [Test]
+        public void ParseAllCharactersFourthAccountNumber()
+        {
+            var bankocr = new BankOCR();
+            var result = bankocr.ParseFile("fourthOCRFile.txt");
+            Assert.AreEqual(245798001982, result); 
+        }
+
         //[Test]
         //public void TestingAllPartsOfClassBankOCR()
         //{
