@@ -32,7 +32,7 @@ namespace Tests
         public void ParseAllCharactersThirdAccountNumber()
         {
             var bankocr = new BankOCR();
-            var result = bankocr.ParseFile("thirdOCRFile.txt");
+            var result = bankocr.ParseFile("thirdOCRFile.txt"); 
             Assert.AreEqual(490067715, result); 
         }
 

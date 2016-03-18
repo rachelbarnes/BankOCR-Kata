@@ -26,7 +26,7 @@ namespace ConsoleApplication3
         public int ParseFile(string textFileName)
         {
             List<string> textFile = new List<string>();
-            var file = "thirdOCRFile.txt";
+            var file = "firstOCRFile.txt";
             string[] readFile = System.IO.File.ReadAllLines(file); 
             foreach (string line in readFile)
             {
@@ -65,3 +65,7 @@ namespace ConsoleApplication3
         }
     }
 }
+
+//next story: be able to import a file and not change the file name in the 
+//file variable assignment in ParseFile(textfile). 
+//having an empty path is not "legal"
