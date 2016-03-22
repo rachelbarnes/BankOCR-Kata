@@ -23,25 +23,26 @@ namespace Tests
         [Test]
         public void ParseAllCharactersSecondAccountNumber()
         {
-            var bankocr = new BankOCR(); 
+            var bankocr = new BankOCR();
             var result = bankocr.ParseFile("secondOCRFile.txt");
-            Assert.AreEqual(123456789, result); 
+            Assert.AreEqual(123456789, result);
         }
 
         [Test]
         public void ParseAllCharactersThirdAccountNumber()
         {
             var bankocr = new BankOCR();
-            var result = bankocr.ParseFile("thirdOCRFile.txt"); 
-            Assert.AreEqual(490067715, result); 
+            var result = bankocr.ParseFile("thirdOCRFile.txt");
+            Assert.AreEqual(490067715, result);
         }
 
         [Test]
         public void ParseAllCharactersFourthAccountNumber()
         {
+            //testing a different length account number
             var bankocr = new BankOCR();
             var result = bankocr.ParseFile("fourthOCRFile.txt");
-            Assert.AreEqual(245798001982, result); 
+            Assert.AreEqual(245798001982, result);
         }
 
         //[Test]
@@ -101,8 +102,58 @@ namespace Tests
         //    var convertCharacters = bankocr.GetAccountNumber(textFile);
         //    var expected = 111111111;
         //    Assert.AreEqual(expected, convertCharacters);
-
-
         //}
+
+        [Test]
+        public void testValidAccountNumber123456789()
+        {
+            var accountNumber = 123456789; // 45750800;
+            var checksum = new CheckSum();
+            var Sum = checksum.CheckForValidCheckSum(accountNumber);
+            Assert.AreEqual(true, Sum);
+        }
+
+        [Test]
+        public void testValidAccountNumberThirdOCRFile ()
+        {
+            var accountNumber = 490067715;
+            var checksum = new CheckSum();
+            var Sum = checksum.CheckForValidCheckSum(accountNumber);
+            Assert.AreEqual(true, Sum);
+        }
+
+        [Test]
+        public void testValidAccountNumber2()
+        {
+            var accountNumber = 345882865;
+            var checksum = new CheckSum();
+            var Sum = checksum.CheckForValidCheckSum(accountNumber);
+            Assert.AreEqual(true, Sum);
+        }
+
+        [Test]
+        public void testValidAccountNumber3()
+        {
+            var accountNumber = 554433995;
+            var checksum = new CheckSum();
+            var Sum = checksum.CheckForValidCheckSum(accountNumber);
+            Assert.AreEqual(true, Sum);
+        }
+        //these should not be passing; im just asking it to evaluate the
+        //same set of positionValues in the for loop which is why everything
+        //is passing. 
+
+
+
+        [Test]
+        public void testIncorrectAccountNumber()
+        {
+
+            var accountNumber = 664371495;
+            var checksum = new CheckSum();
+            var Sum = checksum.CheckForValidCheckSum(accountNumber);
+            Assert.AreEqual(false, Sum);
+        }
+//this is testing false - it is coming back as true in a failed test. 
     }
 }

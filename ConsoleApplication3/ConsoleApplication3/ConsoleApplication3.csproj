@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BankOCR.cs" />
+    <Compile Include="Checksum.cs" />
     <Compile Include="DictionaryOfCharacters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
