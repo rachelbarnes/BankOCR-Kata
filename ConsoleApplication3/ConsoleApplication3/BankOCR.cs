@@ -11,29 +11,24 @@ namespace ConsoleApplication3
     {
         public static void Main(string[] args)
         {
-            //var bankocr = new BankOCR();
-            //var displayFile = bankocr.ParseFile("secondOCRFile.txt");
-            //var displaySingleCharacter = bankocr.GetSingleIntCharacter(5, displayFile);
-            //var getAccountNumber = bankocr.GetAccountNumber(displayFile);
-            ////Console.WriteLine(displayFile);
-            //Console.WriteLine(displaySingleCharacter);
-            //Console.WriteLine(bankocr.GetAccountNumber(displayFile));
-            //Console.ReadLine();
+
         }
     }
+
+    //aggregation: "has a" relationship - this may help with some of the problems I'm facing;
     public class BankOCR
     {
-        public long ParseFile(string textFileName)
+        
+        public string ParseFile(string textFileName)
         {
             List<string> textFile = new List<string>();
-            string[] readFile = System.IO.File.ReadAllLines(textFileName); 
+            string[] readFile = System.IO.File.ReadAllLines(textFileName);
             foreach (string line in readFile)
             {
                 textFile.Add(line);
             }
-            return GetAccountNumber(textFile);  
+            return GetAccountNumber(textFile);
         }
-
 
         public string GetSingleIntCharacter(int index, List<string> textLines)
         {
@@ -47,18 +42,21 @@ namespace ConsoleApplication3
             return singleDrawnCharacter;
         }
 
-        public long GetAccountNumber(List<string> textToBeConverted)
+        public string GetAccountNumber(List<string> textToBeConverted)
         {
             var dictionary = new DictionaryOfCharacters();
+            Console.Write(textToBeConverted.Count + "Lord Boyscout :-)" + "\r\n" );
             int lengthOfLine = textToBeConverted[1].Count() / 3;
             string retrieveDictionaryValue = "";
 
             for (int characterIndex = 0; characterIndex < lengthOfLine; characterIndex++)
             {
-                string drawnCharacterString = GetSingleIntCharacter(characterIndex, textToBeConverted); 
-                retrieveDictionaryValue += dictionary.textFileCharacters[drawnCharacterString].ToString();
+                string drawnCharacterString = GetSingleIntCharacter(characterIndex, textToBeConverted);
+                if (!dictionary.textFileCharacters.ContainsKey(drawnCharacterString))
+                    retrieveDictionaryValue += '?';
+                 else retrieveDictionaryValue += dictionary.textFileCharacters[drawnCharacterString].ToString();
             }
-            return Int64.Parse(retrieveDictionaryValue);
+            return (retrieveDictionaryValue); //had an Int64.Parse before retrieve... 
         }
     }
 }
