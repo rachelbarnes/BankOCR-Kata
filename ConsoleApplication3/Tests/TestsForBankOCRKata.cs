@@ -105,7 +105,7 @@ namespace Tests
         //}
 
         [Test]
-        public void testValidAccountNumber123456789()
+        public void testValidAccountNumber1()
         {
             var accountNumber = 123456789; // 45750800;
             var checksum = new CheckSum();
@@ -114,12 +114,12 @@ namespace Tests
         }
 
         [Test]
-        public void testValidAccountNumberThirdOCRFile ()
+        public void testValidAccountNumber3 ()
         {
             var accountNumber = 490067715;
             var checksum = new CheckSum();
             var Sum = checksum.CheckForValidCheckSum(accountNumber);
-            Assert.AreEqual(true, Sum);
+            Assert.AreEqual(false, Sum);
         }
 
         [Test]
@@ -132,12 +132,12 @@ namespace Tests
         }
 
         [Test]
-        public void testValidAccountNumber3()
+        public void testIncorrectAccountNumber2()
         {
             var accountNumber = 554433995;
             var checksum = new CheckSum();
             var Sum = checksum.CheckForValidCheckSum(accountNumber);
-            Assert.AreEqual(true, Sum);
+            Assert.AreEqual(false, Sum);
         }
         //these should not be passing; im just asking it to evaluate the
         //same set of positionValues in the for loop which is why everything
@@ -148,12 +148,35 @@ namespace Tests
         [Test]
         public void testIncorrectAccountNumber()
         {
-
             var accountNumber = 664371495;
             var checksum = new CheckSum();
             var Sum = checksum.CheckForValidCheckSum(accountNumber);
             Assert.AreEqual(false, Sum);
         }
 //this is testing false - it is coming back as true in a failed test. 
+
+        [Test]
+        public void testSumAllDigits()
+        {
+            var accountNumber = 111111111;
+            var checksum = new CheckSum();
+            var Sum = checksum.ChecksumAllDigits(accountNumber);
+            Assert.AreEqual(45, Sum);
+        }
+
+        [Test]
+        public void test_Inverse()
+        {
+            var checksum = new CheckSum();
+            Assert.AreEqual(1, checksum.FindInverse(8));
+            Assert.AreEqual(2, checksum.FindInverse(7));
+            Assert.AreEqual(3, checksum.FindInverse(6));
+            Assert.AreEqual(4, checksum.FindInverse(5));
+            Assert.AreEqual(5, checksum.FindInverse(4));
+            Assert.AreEqual(6, checksum.FindInverse(3));
+            Assert.AreEqual(7, checksum.FindInverse(2));
+            Assert.AreEqual(8, checksum.FindInverse(1));
+            Assert.AreEqual(9, checksum.FindInverse(0));
+        }
     }
 }

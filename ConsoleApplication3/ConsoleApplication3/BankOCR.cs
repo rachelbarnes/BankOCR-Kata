@@ -23,17 +23,15 @@ namespace ConsoleApplication3
     }
     public class BankOCR
     {
-        public List<string> ParseFile(string textFileName)
+        public long ParseFile(string textFileName)
         {
             List<string> textFile = new List<string>();
-            var file = "thirdOCRFile.txt";
-            string[] readFile = System.IO.File.ReadAllLines(file); 
+            string[] readFile = System.IO.File.ReadAllLines(textFileName); 
             foreach (string line in readFile)
             {
                 textFile.Add(line);
             }
-            return textFile;
-            //return GetAccountNumber(textFile);  
+            return GetAccountNumber(textFile);  
         }
 
 
