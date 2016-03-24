@@ -45,8 +45,8 @@ namespace ConsoleApplication3
         public string GetAccountNumber(List<string> textToBeConverted)
         {
             var dictionary = new DictionaryOfCharacters();
-            Console.Write(textToBeConverted.Count + "Lord Boyscout :-)" + "\r\n" );
-            int lengthOfLine = textToBeConverted[1].Count() / 3;
+            //Console.Write(textToBeConverted.Count + "Lord Boyscout :-)" + "\r\n" );
+            int lengthOfLine = textToBeConverted[0].Count() / 3;
             string retrieveDictionaryValue = "";
 
             for (int characterIndex = 0; characterIndex < lengthOfLine; characterIndex++)
@@ -60,7 +60,3 @@ namespace ConsoleApplication3
         }
     }
 }
-
-//next story: be able to import a file and not change the file name in the 
-//file variable assignment in ParseFile(textfile). 
-//having an empty path is not "legal"

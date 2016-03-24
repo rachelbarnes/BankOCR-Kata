@@ -90,27 +90,26 @@ namespace Tests
             var accountNumber = 345882865;
             var checksum = new CheckSum();
             //var textFile = "firstOCRFile.txt";
-            var Sum = checksum.CheckValidAccountNumber(accountNumber.ToString());
+            var Sum = checksum.CheckValidityAccountNumber(accountNumber.ToString());
             Assert.AreEqual(accountNumber.ToString(), Sum);
         }
-
+        //the file is not being imported correctly or it is not being transfered here. 
         [Test]
         public void TestInvalidAccountNumber()
         {
             var accountNumber = 664371495;
             var checksum = new CheckSum();
-            var Sum = checksum.CheckValidAccountNumber(accountNumber.ToString());
+            var Sum = checksum.CheckValidityAccountNumber(accountNumber.ToString());
             Assert.AreEqual(accountNumber + " ERR", Sum);
         }
         [Test]
-        public void TestAccountNumberWithQuestionMark()
+        public void TestForIllegibleAccountNumber()
         {
             var bankOCR = new BankOCR();
             var checksum = new CheckSum();
             var accountNumber = "12345?789";  
-            //var actual = checksum.CheckValidAccountNumber(accountNumber);
             var expected = accountNumber + " ILL";
-            Assert.AreEqual(expected, checksum.CheckValidAccountNumber(accountNumber));  
+            Assert.AreEqual(expected, checksum.CheckValidityAccountNumber(accountNumber));  
         }
     }
 }
