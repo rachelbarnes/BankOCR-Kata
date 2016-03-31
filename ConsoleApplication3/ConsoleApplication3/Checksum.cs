@@ -6,66 +6,42 @@ using System.Threading.Tasks;
 
 namespace ConsoleApplication3
 {
-    public class CheckSum
+    public class Checksum
     {
-        //BankOCR Bank;
-        //public CheckSum CheckAccountNumbersForValidity(BankOCR BankAccountNumbers)
-        //{
-        //    var textToBeConverted = Bank.
-        //    this.Bank.GetAccountNumber(textToBeConverted);
-        //    this.Bank = BankAccountNumbers;
 
-        //}
         public int ChecksumAllDigits(int number)
         {
-            var accountNumberString = number.ToString();
-            var sumOfPositionValueAndIncrement = 0;
-            var increment = 1;
-            for (var position = 8; position >= 0; position--, increment++)
+            var digitSum = 0;
+            for (var position = 8; position >= 0; position--)
             {
-                sumOfPositionValueAndIncrement += (int.Parse((accountNumberString[position].ToString())) * FindInverse(position));
+                var digit = int.Parse((number.ToString()[position].ToString()));
+                digitSum += (digit * FindInverse(position));
             }//string allows us to choose positions in the string without creating a foreach loop
-            return sumOfPositionValueAndIncrement;
+            return digitSum;
         }
 
         public bool CheckForValidCheckSum(int accountNumber)
         {
             var Checksum = ChecksumAllDigits(accountNumber) % 11;
-            if (Checksum == 0)
-            { return true; }
-            else return false;
+            return Checksum == 0;
         }
 
         public int FindInverse(int x)
         {
             return Math.Abs(x - 9);
         }
-        ////Class Variables
-        //   public BankOCR HSBC;
 
-
-        //   //Constructor
-        //   public IllegibleCharacter(BankOCR bankOCRInstance)
-        //   {
-        //       HSBC = bankOCRInstance;
-        //   }
-
-
-        //Class Methods
         public string CheckValidityAccountNumber(string accountNumber)
         {
+            if (accountNumber.Contains("?")) {
+                return accountNumber + " ILL";
+            }
 
-            //int outResult;
-            var improperlyScannedNumber = accountNumber;
-            var invalidAccountNumberResponse = accountNumber + " ERR";
-            var improperlyScannedNumberRepsonse = accountNumber + " ILL";
-            if (accountNumber.Contains("?"))
-            { return improperlyScannedNumberRepsonse; }
-
-            var validAccountNumber = CheckForValidCheckSum(Convert.ToInt32(int.Parse(accountNumber))); //, out outResult)));
-            if (validAccountNumber == true)
-            { return accountNumber; }
-            else return invalidAccountNumberResponse;
+            if (CheckForValidCheckSum(Convert.ToInt32(int.Parse(accountNumber)))) {
+                return accountNumber;
+            } else {
+                return accountNumber + " ERR";
+            }
         }
     }
 }

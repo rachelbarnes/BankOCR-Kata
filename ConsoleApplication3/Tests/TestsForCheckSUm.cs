@@ -16,22 +16,22 @@ namespace Tests
         public void testValidAccountNumber1()
         {
             var accountNumber = 123456789;
-            var checksum = new CheckSum();
+            var checksum = new Checksum();
             var Sum = checksum.CheckForValidCheckSum(accountNumber);
             Assert.AreEqual(true, Sum);
         }
 
-        [Test]
-        public void testValidAccountNumber3()
-        {
-            // 45750800;
-        }
+        //[Test]
+        //public void testValidAccountNumber3()
+        //{
+        //    // 45750800;
+        //}
 
         [Test]
         public void testValidAccountNumber2()
         {
             var accountNumber = 345882865;
-            var checksum = new CheckSum();
+            var checksum = new Checksum();
             var Sum = checksum.CheckForValidCheckSum(accountNumber);
             Assert.AreEqual(true, Sum);
         }
@@ -40,7 +40,7 @@ namespace Tests
         public void testIncorrectAccountNumber2()
         {
             var accountNumber = 554433995;
-            var checksum = new CheckSum();
+            var checksum = new Checksum();
             var Sum = checksum.CheckForValidCheckSum(accountNumber);
             Assert.AreEqual(false, Sum);
         }
@@ -54,7 +54,7 @@ namespace Tests
         public void testIncorrectAccountNumber()
         {
             var accountNumber = 664371495;
-            var checksum = new CheckSum();
+            var checksum = new Checksum();
             var Sum = checksum.CheckForValidCheckSum(accountNumber);
             Assert.AreEqual(false, Sum);
         }
@@ -64,7 +64,7 @@ namespace Tests
         public void testSumAllDigits()
         {
             var accountNumber = 111111111;
-            var checksum = new CheckSum();
+            var checksum = new Checksum();
             var Sum = checksum.ChecksumAllDigits(accountNumber);
             Assert.AreEqual(45, Sum);
         }
@@ -72,7 +72,7 @@ namespace Tests
         [Test]
         public void test_Inverse()
         {
-            var checksum = new CheckSum();
+            var checksum = new Checksum();
             Assert.AreEqual(1, checksum.FindInverse(8));
             Assert.AreEqual(2, checksum.FindInverse(7));
             Assert.AreEqual(3, checksum.FindInverse(6));
@@ -88,28 +88,37 @@ namespace Tests
         public void TestValidAccountNumber()
         {
             var accountNumber = 345882865;
-            var checksum = new CheckSum();
+            var checksum = new Checksum();
             //var textFile = "firstOCRFile.txt";
             var Sum = checksum.CheckValidityAccountNumber(accountNumber.ToString());
             Assert.AreEqual(accountNumber.ToString(), Sum);
         }
         //the file is not being imported correctly or it is not being transfered here. 
         [Test]
+            //var actual = checksum.CheckValidAccountNumber(accountNumber);
         public void TestInvalidAccountNumber()
         {
             var accountNumber = 664371495;
-            var checksum = new CheckSum();
+            var checksum = new Checksum();
             var Sum = checksum.CheckValidityAccountNumber(accountNumber.ToString());
             Assert.AreEqual(accountNumber + " ERR", Sum);
         }
         [Test]
         public void TestForIllegibleAccountNumber()
         {
-            var bankOCR = new BankOCR();
-            var checksum = new CheckSum();
+            var checksum = new Checksum();
             var accountNumber = "12345?789";  
             var expected = accountNumber + " ILL";
             Assert.AreEqual(expected, checksum.CheckValidityAccountNumber(accountNumber));  
+        }
+        
+        [Test]
+        public void TestForIllegibleAccountNumber2()
+        {
+            var checksum = new Checksum();
+            var accountNumber = "?????5430";
+            var expected = accountNumber + " ILL";
+            Assert.AreEqual(expected, checksum.CheckValidityAccountNumber(accountNumber)); 
         }
     }
 }

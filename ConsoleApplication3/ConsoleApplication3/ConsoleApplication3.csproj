@@ -48,6 +48,7 @@
     <Compile Include="BankOCR.cs" />
     <Compile Include="Checksum.cs" />
     <Compile Include="DictionaryOfCharacters.cs" />
+    <Compile Include="Guesser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,14 +56,19 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bankOCR.js" />
     <Content Include="fifthOCRFile.txt" />
     <Content Include="fourthOCRFile.txt" />
+    <Content Include="GeneratableNumbers.js" />
+    <Content Include="index.html" />
+    <Content Include="ParseFIle.js" />
     <Content Include="secondOCRFile.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="firstOCRFile.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Story 4 details.txt" />
     <Content Include="thirdOCRFile.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

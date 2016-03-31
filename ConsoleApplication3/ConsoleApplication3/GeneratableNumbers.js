@@ -1,0 +1,11 @@
+﻿var generatableNumbers = {};
+generatableNumbers["     |  |   "] = 1;
+generatableNumbers[" _  _||_    "] = 2;
+generatableNumbers[" _  _| _|   "] = 3;
+generatableNumbers["   |_|  |   "] = 4;
+generatableNumbers[" _ |_  _|   "] = 5;
+generatableNumbers[" _ |_ |_|   "] = 6;
+generatableNumbers[" _   |  |   "] = 7;
+generatableNumbers[" _ |_||_|   "] = 8;
+generatableNumbers[" _ |_| _|   "] = 9;
+generatableNumbers[" _ | ||_|   "] = 0;

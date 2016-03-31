@@ -29,9 +29,6 @@ namespace Tests
             var result = bankocr.ParseFile("secondOCRFile.txt");
             Assert.AreEqual(exected, result);
         }
-        //these failing tests are due to the change in return type from the ParseFile
-        //this can easily be changed, however, I was testing a possible functionality in 
-        //the GetAccountNumber()
         [Test]
         public void ParseAllCharactersThirdAccountNumber()
         {

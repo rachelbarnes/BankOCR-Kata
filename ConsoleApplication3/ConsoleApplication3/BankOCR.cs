@@ -11,11 +11,8 @@ namespace ConsoleApplication3
     {
         public static void Main(string[] args)
         {
-
         }
     }
-
-    //aggregation: "has a" relationship - this may help with some of the problems I'm facing;
     public class BankOCR
     {
         
@@ -32,11 +29,10 @@ namespace ConsoleApplication3
 
         public string GetSingleIntCharacter(int index, List<string> textLines)
         {
-            string substringLine;
             string singleDrawnCharacter = "";
             foreach (string line in textLines)
             {
-                substringLine = line.Substring((index * 3), 3);
+                string substringLine = line.Substring((index * 3), 3);
                 singleDrawnCharacter += substringLine;
             }
             return singleDrawnCharacter;
@@ -45,7 +41,6 @@ namespace ConsoleApplication3
         public string GetAccountNumber(List<string> textToBeConverted)
         {
             var dictionary = new DictionaryOfCharacters();
-            //Console.Write(textToBeConverted.Count + "Lord Boyscout :-)" + "\r\n" );
             int lengthOfLine = textToBeConverted[0].Count() / 3;
             string retrieveDictionaryValue = "";
 
@@ -56,7 +51,7 @@ namespace ConsoleApplication3
                     retrieveDictionaryValue += '?';
                  else retrieveDictionaryValue += dictionary.textFileCharacters[drawnCharacterString].ToString();
             }
-            return (retrieveDictionaryValue); //had an Int64.Parse before retrieve... 
+            return (retrieveDictionaryValue); 
         }
     }
 }
