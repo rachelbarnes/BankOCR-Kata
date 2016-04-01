@@ -1,19 +1,15 @@
 ﻿var addAndMultiplyDigits = function (accountNumber) {
-    //in the future for loops, i can have 2 conditions, 
-    //but they have to be linked with || or &&
     var sum = 0;
     for (var i = 0, decrement = 9; i < 9; i++, decrement--) {
         sum += parseInt(accountNumber.toString()[i]) * (decrement);
     }
     return sum;
-} 
-
+}
 var checkForValidSum = function (number) {
     if (addAndMultiplyDigits(number) % 11 == 0) {
         return true;
     }
 }
-
 var checkValidityOfAccountNumber = function (number) {
     switch (number) {
         case illegibleCase:
@@ -25,18 +21,9 @@ var checkValidityOfAccountNumber = function (number) {
         default:
             checkFOrValidSum(number) == true
             return number;
-            // if ('number'.includes('?')) {
-            //      return 'number' + ' ILL';
-            // }
-            // if (checkForValidSum(number) !== true) {
-            //     return number + ' ERR';
-            //} 
-            // if (checkForValidSum(number) == true) {
-            //     number;
-            // }
     }
 }
-    // tests // 
+//tests
 var assertEqual = function (expected, actual) {
     var ret = expected === actual; //=== doesn't do type conversion; == does type conversion 
     if (ret) { return true; }
@@ -54,7 +41,10 @@ var runTestsValidSum = function () {
 var runTestsValidAccountNumber = function () {
     return assertEqual(123456789, checkValidityOfAccountNumber(123456789))
         && assertEqual("1234??789 ILL", checkForQuestionMarks('1234??789'))
-        && assertEqual("554433985 ERR", checkValidityOfAccountNumber('554433985'));
+        && assertEqual("554433985 ERR", checkValidityOfAccountNumber(554433985))
+        && assertEqual("664371495 ERR", checkValidityOfAccountNumber(664371495))
+        && assertEqual("11????567 ILL", checkValidityOfAccountNumber("11????567"));
+    
 }
 
  document.getElementById("results").innerHTML = runTests();
