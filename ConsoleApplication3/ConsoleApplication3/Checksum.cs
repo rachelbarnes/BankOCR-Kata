@@ -36,7 +36,6 @@ namespace ConsoleApplication3
             if (accountNumber.Contains("?")) {
                 return accountNumber + " ILL";
             }
-
             if (CheckForValidCheckSum(Convert.ToInt32(int.Parse(accountNumber)))) {
                 return accountNumber;
             } else {

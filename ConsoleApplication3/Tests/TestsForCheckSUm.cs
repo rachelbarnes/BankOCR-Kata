@@ -21,11 +21,14 @@ namespace Tests
             Assert.AreEqual(true, Sum);
         }
 
-        //[Test]
-        //public void testValidAccountNumber3()
-        //{
-        //    // 45750800;
-        //}
+        [Test]
+        public void testingAnotherValidAccountNumber()
+        {
+            var accountNumber = 123456789;
+            var checksum = new Checksum();
+            var Sum = checksum.CheckForValidCheckSum(accountNumber);
+            Assert.AreEqual(true, Sum); 
+        }
 
         [Test]
         public void testValidAccountNumber2()
