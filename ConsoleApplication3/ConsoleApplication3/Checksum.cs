@@ -16,7 +16,7 @@ namespace ConsoleApplication3
             {
                 var digit = int.Parse((number.ToString()[position].ToString()));
                 digitSum += (digit * FindInverse(position));
-            }//string allows us to choose positions in the string without creating a foreach loop
+            }
             return digitSum;
         }
 
@@ -44,6 +44,3 @@ namespace ConsoleApplication3
         }
     }
 }
-
-//i battled with the int.TryParse... and I lost. So i rearranged the order of operations to check if it's illegible before it can
-//parse the string into an int, which was my problem as ? cannot be parsed into an int, so it broke the code. 

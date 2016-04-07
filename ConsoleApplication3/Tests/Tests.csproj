@@ -45,7 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestForGuesser.cs" />
     <Compile Include="TestsForParseFileForAccountNumber.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestsForChecksum.cs" />
