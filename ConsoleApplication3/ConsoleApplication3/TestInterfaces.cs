@@ -17,24 +17,31 @@ namespace ConsoleApplication3
                 total += pan.GetArea();
             }
             return total;
+            //these two logics say the same thing. aggregate goes through a looping motion? Is it a part
+            //of the ienumerables idea? 
         }
-
     }
     public interface HasArea
     {
         double GetArea();
     }
+    
     public interface TakesFields
     {
         HasArea GetInput();
     }
+    
     public class RoundPan : HasArea
     {
         private int Radius;
         public RoundPan(int radius)
         {
             this.Radius = radius;
-        }
+        }//create the constructor as an object; the Radius is a class field, and the constructor
+        //takes this field and defines it as it's own by assigning the parameter to that field (if 
+        //you call them different names, it may make things easier to start). This means,
+        //whenever the Radius is changed, the roundpan is called and the Radius gets changed 
+        //whenever that that constructor is called with a defined parameter.
 
         public double GetArea()
         {
