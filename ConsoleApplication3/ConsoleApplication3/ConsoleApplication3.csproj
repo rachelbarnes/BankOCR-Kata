@@ -48,7 +48,9 @@
     <Compile Include="BankOCR.cs" />
     <Compile Include="Checksum.cs" />
     <Compile Include="DictionaryOfCharacters.cs" />
+    <Compile Include="DictionaryRomanNumerals.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RomanNumerals.cs" />
     <Compile Include="TestInterfaces.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,7 +62,6 @@
     <Content Include="bankOCR.js" />
     <Content Include="fifthOCRFile.txt" />
     <Content Include="fourthOCRFile.txt" />
-    <Content Include="GeneratableNumbers.js" />
     <Content Include="index.html" />
     <Content Include="ParseFIle.js" />
     <Content Include="secondOCRFile.txt">

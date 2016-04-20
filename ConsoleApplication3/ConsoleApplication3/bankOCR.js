@@ -2,7 +2,6 @@
     var indNumber = "";
     var lengthRowOne = drawnNumberString.length / 3;
     for (var linePos = 0; linePos < lengthRowOne ; linePos += 3) {
-        //to have the proper incrementing value, the += is needed for properly increment the linePos. 
         concatenatedString = (drawnNumberString.substr(linePos, 3) + drawnNumberString.substr(linePos + 27, 3) + drawnNumberString.substr(linePos + 54, 3));
         if (dictionaryOfCharacters[concatenatedString] != null) {
             indNumber += dictionaryOfCharacters[concatenatedString].toString();
@@ -30,7 +29,6 @@ var checkForValidSum = function (number) {
 var checkValidityOfAccountNumber = function (number) {
     var parsedNumber = parseAccountNumber(number); 
     if (parsedNumber.includes('?')) {
-        //as an interesting note: you can set a start position for the substring indicating where to start testing, which is optional
         return parsedNumber + ' ILL'; 
     } else if (checkForValidSum(parseInt(parsedNumber)) == true) {
         return parsedNumber + '    '; 

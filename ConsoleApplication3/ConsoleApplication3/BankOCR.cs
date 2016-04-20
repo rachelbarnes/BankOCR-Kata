@@ -15,7 +15,6 @@ namespace ConsoleApplication3
     }
     public class BankOCR
     {
-        
         public string ParseFile(string textFileName)
         {
             List<string> textFile = new List<string>();
@@ -26,7 +25,6 @@ namespace ConsoleApplication3
             }
             return GetAccountNumber(textFile);
         }
-
         public string GetSingleIntCharacter(int index, List<string> textLines)
         {
             string singleDrawnCharacter = "";
@@ -37,7 +35,6 @@ namespace ConsoleApplication3
             }
             return singleDrawnCharacter;
         }
-
         public string GetAccountNumber(List<string> textToBeConverted)
         {
             var dictionary = new DictionaryOfCharacters();
